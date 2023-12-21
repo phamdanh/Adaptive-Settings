@@ -28,8 +28,8 @@ class ThemeProvider {
     final lightLeadingIconsColor = Color.fromARGB(255, 70, 70, 70);
     final darkLeadingIconsColor = Color.fromARGB(255, 197, 197, 197);
 
-    final lightSettingsListBackground = Color.fromRGBO(240, 240, 240, 1);
-    final darkSettingsListBackground = Color.fromRGBO(27, 27, 27, 1);
+    final lightScreenBackground = Color(0xFFF4F5F7);
+    final darkScreenBackground = Color(0xFF1B1B1F);
 
     final lightSettingsTitleColor = Color.fromRGBO(11, 87, 208, 1);
     final darkSettingsTitleColor = Color.fromRGBO(211, 227, 253, 1);
@@ -51,7 +51,7 @@ class ThemeProvider {
 
     final isLight = brightness == Brightness.light;
 
-    final listBackground = isLight ? lightSettingsListBackground : darkSettingsListBackground;
+    final screenBackground = isLight ? lightScreenBackground : darkScreenBackground;
 
     final titleTextColor = isLight ? lightSettingsTitleColor : darkSettingsTitleColor;
 
@@ -70,7 +70,7 @@ class ThemeProvider {
 
     return SettingsThemeData(
       tileHighlightColor: tileHighlightColor,
-      screenBackground: listBackground,
+      screenBackground: screenBackground,
       titleTextColor: titleTextColor,
       settingsTileTextColor: settingsTileTextColor,
       tileDescriptionTextColor: tileDescriptionTextColor,
@@ -84,11 +84,11 @@ class ThemeProvider {
     required BuildContext context,
     required Brightness brightness,
   }) {
-    final lightSettingsListBackground = Color.fromRGBO(242, 242, 247, 1);
-    final darkSettingsListBackground = CupertinoColors.black;
+    final lightScreenBackground = Color(0xFFF4F5F7);
+    final darkScreenBackground = Color(0xFF1B1B1F);
 
-    final lightSettingSectionColor = CupertinoColors.white;
-    final darkSettingSectionColor = Color.fromARGB(255, 28, 28, 30);
+    final lightGroupBackground = Color(0xFFFFFFFF);
+    final darkGroupBackground = Color(0xFF1B1B1F);
 
     final lightSettingsTitleColor = Color.fromRGBO(109, 109, 114, 1);
     final darkSettingsTitleColor = CupertinoColors.systemGrey;
@@ -110,9 +110,9 @@ class ThemeProvider {
 
     final isLight = brightness == Brightness.light;
 
-    final listBackground = isLight ? lightSettingsListBackground : darkSettingsListBackground;
+    final screenBackground = isLight ? lightScreenBackground : darkScreenBackground;
 
-    final sectionBackground = isLight ? lightSettingSectionColor : darkSettingSectionColor;
+    final groupBackground = isLight ? lightGroupBackground : darkGroupBackground;
 
     final titleTextColor = isLight ? lightSettingsTitleColor : darkSettingsTitleColor;
 
@@ -128,8 +128,8 @@ class ThemeProvider {
 
     return SettingsThemeData(
       tileHighlightColor: tileHighlightColor,
-      screenBackground: listBackground,
-      groupBackground: sectionBackground,
+      screenBackground: screenBackground,
+      groupBackground: groupBackground,
       titleTextColor: titleTextColor,
       dividerColor: dividerColor,
       trailingTextColor: trailingTextColor,
